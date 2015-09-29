@@ -1,0 +1,23 @@
+{
+  "name": "nico_slide",
+  "version": "0.0.0",
+  "authors": [
+    "rei-m"
+  ],
+  "description": "ニコ動っぽいスライド",
+  "main": "index.js",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "js/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal-js": "~2.6.2"
+  }
+}

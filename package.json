@@ -1,0 +1,15 @@
+{
+  "name": "nico_slide",
+  "version": "1.0.0",
+  "description": "ニコ動っぽいスライド",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rei-m",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "require-dir": "^0.3.0"
+  }
+}
