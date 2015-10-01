@@ -5,10 +5,16 @@
     <title></title>
   </head>
   <body>
-    <div id="output"></div>
-    <input type="button" id="send" name="send" value="おくる">
+    <div id="comment_form" class="">
+      <input v-model="comment" type="text" placeholder="コメントをいれてね">
+      <input v-on="click: onSend" type="button" value="おくる">
+      <input v-on="click: onSendLgtm" type="button" value=" LGTM ">
+    </div>
+
     <script src="https://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="../js/main.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../js/dataStore.js" charset="utf-8"></script>
+    <script src="../js/lib/vue.min.js" charset="utf-8"></script>
+    <script src="../js/comment.js" charset="utf-8"></script>
   </body>
 </html>

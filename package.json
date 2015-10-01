@@ -9,7 +9,10 @@
   "author": "rei-m",
   "license": "MIT",
   "devDependencies": {
+    "bower": "^1.5.3",
     "gulp": "^3.9.0",
+    "gulp-bower-files": "^0.2.7",
+    "main-bower-files": "^2.9.0",
     "require-dir": "^0.3.0"
   }
 }
