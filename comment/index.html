@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <div id="comment_form" class="">
-      <input v-model="comment" type="text" placeholder="コメントをいれてね">
-      <input v-on="click: onSend" type="button" value="おくる">
-      <input v-on="click: onSendLgtm" type="button" value=" LGTM ">
-    </div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="https://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="../js/dataStore.js" charset="utf-8"></script>
-    <script src="../js/lib/vue.min.js" charset="utf-8"></script>
-    <script src="../js/comment.js" charset="utf-8"></script>
-  </body>
+  <title>Nico Slide</title>
+  <link rel="stylesheet" type="text/css" href="../honoka/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/comment.css" media="screen">
+</head>
+<body>
+
+<header>
+  <div class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <span class="navbar-header__title">Nico Slide</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="row">
+  <div class="col-md-6">
+    <div id="comment_form">
+      <div class="row row--send_comment">
+        <textarea v-model="comment" placeholder="コメントをいれてね" class="form-control" rows="5"></textarea>
+        <input v-on="click: onSend" type="button" class="btn btn-default btn-block btn--send_comment" value="おくる">
+      </div>
+      <div class="row row--button">
+        <div class="col-xs-6">
+          <input v-on="click: onSendLgtm" type="button" class="btn btn-success btn-block btn-square" value=" LGTM ">
+        </div>
+        <div class="col-xs-6">
+          <input v-on="click: onSendLgtm" type="button" class="btn btn-primary btn-block btn-square" value=" いいね！ ">
+        </div>
+      </div>
+      <div class="row row--button">
+        <div class="col-xs-6">
+          <input v-on="click: onSendLgtm" type="button" class="btn btn-warning btn-block btn-square" value=" なるほど！ ">
+        </div>
+        <div class="col-xs-6">
+          <input v-on="click: onSendLgtm" type="button" class="btn btn-info btn-block btn-square" value=" よくわからん・・・ ">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+  </div>
+</div>
+
+</div>
+<script src="https://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="../honoka/js/bootstrap.min.js"></script>
+<script src="../js/dataStore.js" charset="utf-8"></script>
+<script src="../js/lib/vue.min.js" charset="utf-8"></script>
+<script src="../js/comment.js" charset="utf-8"></script>
+</body>
 </html>

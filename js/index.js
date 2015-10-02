@@ -13,6 +13,7 @@ $(function(){
     // commentAreaに追加されたcommentを取得
     var el = mutationRecords[0].addedNodes[0];
 
+
     // 初期表示時の位置とアニメーションのスタイルを設定
     el.style.right = '-' + el.offsetWidth + 'px';
     el.style.top = Math.floor( Math.random() * 90 ) + '%';
@@ -23,6 +24,7 @@ $(function(){
     setTimeout(function() {
       commentArea.removeChild(el);
     }, 10000);
+
   });
 
   // コメント表示領域の監視を開始。
@@ -43,7 +45,12 @@ $(function(){
       };
       image.src = pushed.value.content;
     } else {
-      el.innerHTML = escapeHtml(pushed.value.content);
+      el.innerHTML = pushed.value.content
+        .split('\n')
+        .map(function(v) {
+          return escapeHtml(v);
+        })
+        .join('<br />');
       commentArea.appendChild(el);
     }
 

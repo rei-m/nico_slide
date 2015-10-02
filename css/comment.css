@@ -1,0 +1,22 @@
+.navbar-header__title {
+  font-size: 36px;
+  margin-top:12px;
+  color: #fff;
+}
+
+.btn-square {
+  height:100px;
+}
+
+.btn--send_comment {
+  margin-top: 16px;
+  height: 56px;
+}
+
+.row--send_comment {
+  margin-bottom: 48px;
+}
+
+.row--button {
+  margin-bottom: 24px;
+}
