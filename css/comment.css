@@ -1,5 +1,9 @@
+.navbar {
+  min-height: 52px;
+}
+
 .navbar-header__title {
-  font-size: 36px;
+  font-size: 32px;
   margin-top:12px;
   color: #fff;
 }

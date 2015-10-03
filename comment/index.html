@@ -7,7 +7,7 @@
 
   <title>Nico Slide Controller</title>
   <link rel="stylesheet" type="text/css" href="../honoka/css/bootstrap.css">
-  <link rel="stylesheet" href="../css/comment.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../css/comment.css" media="screen">
 </head>
 <body>
 
@@ -59,10 +59,10 @@
             <input type="radio" v-model="speed" value="5">はやい
           </label>
         </div>
-        <div class="col-xs-6">
+        <div class="col-md-6">
           <input v-on="click: onSend" type="button" class="btn btn-default btn-block btn--send_comment" value="コメントを投稿する">
         </div>
-        <div class="col-xs-6">
+        <div class="col-md-6">
           <input v-on="click: onSendQuestion" type="button" class="btn btn-default btn-block btn--send_comment" value="質問を投稿する">
         </div>
       </div>

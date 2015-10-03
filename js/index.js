@@ -1,4 +1,4 @@
-$(function(){
+document.addEventListener("DOMContentLoaded", function(event) {
 
   var commentArea = document.getElementById('main-slide');
 
@@ -36,29 +36,31 @@ $(function(){
     var el = document.createElement('div');
     el.className = 'comment';
 
-    if(pushed.value.type === 'image' || pushed.value.content.toLowerCase().search(/^((http|https):\/\/.+(\.jpg|\.gif|\.png))/) === 0) {
-      var image = new Image(pushed.value.size);
+    var values = pushed.value;
+
+    if(values.type === 'image' || values.content.toLowerCase().search(/^((http|https):\/\/.+(\.jpg|\.gif|\.png))/) === 0) {
+      var image = new Image(values.size);
       image.onload = function(e){
-        el.speed = pushed.value.speed;
+        el.speed = values.speed;
         el.appendChild(this);
         commentArea.appendChild(el);
       };
-      image.src = pushed.value.content;
+      image.src = values.content;
     } else {
-      el.innerHTML = pushed.value.content
+      el.innerHTML = values.content
         .split('\n')
         .map(function(v) {
           return escapeHtml(v);
         })
         .join('<br />');
-      el.style.color = pushed.value.color;
-      el.style['font-size'] = pushed.value.size;
-      el.speed = pushed.value.speed;
+      el.style.color = values.color;
+      el.style['font-size'] = values.size;
+      el.speed = values.speed;
       commentArea.appendChild(el);
 
-      if(pushed.value.type === 'question') {
+      if(values.type === 'question') {
         messageDataStore.push({
-          text: pushed.value.content,
+          text: values.content,
           page: window.location.hash
         });
       }

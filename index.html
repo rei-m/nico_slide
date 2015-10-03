@@ -1,66 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Nico Slide</title>
-    <link rel="stylesheet" href="js/lib/reveal/css/reveal.min.css">
-    <link rel="stylesheet" href="js/lib/reveal/css/theme/sky.css" id="theme">
-    <link rel="stylesheet" href="css/index.css" media="screen" charset="utf-8">
-  </head>
-  <body>
-    <div id="main-slide" class="reveal">
-      <div class="slides">
+<head>
+  <meta charset="utf-8">
+  <title>Nico Slide</title>
+  <link rel="stylesheet" type="text/css" href="js/lib/reveal/css/reveal.min.css">
+  <link rel="stylesheet" type="text/css" href="js/lib/reveal/css/theme/sky.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css" charset="utf-8">
+</head>
+<body>
+
+<div id="main-slide" class="reveal">
+  <div class="slides">
 
 <section>
-  <div style="font-size:48px;line-height:80px;">ニコニコ動画風なスライド作ってみたw</div>
+  <div style="font-size:48px;line-height:80px;">タイトルを入れる</div>
   <br>
   <p>
-    <small>Created by Rei Matsushita / <a href="http://twitter.com/rei_m">@rei_m</a></small>
+    <small>Created by Rei Matsushita / <a href="http://twitter.com/rei_m" target="_blank">@rei_m</a></small>
   </p>
 </section>
 
 <section>
-  <h3>2枚目だよー</h3>
+  <h3>1枚目</h3>
   <br>
-  <p class="fragment" style="text-align:left;">本文はこれから考えるぜー</p>
+  <p class="fragment" style="text-align:left;">テキストテキストテキスト</p>
   <aside class="notes">
   </aside>
 </section>
 
-      </div>
-    </div>
+<section>
+  <h3>2枚目</h3>
+  <br>
+  <p class="fragment" style="text-align:left;">テキストテキストテキスト</p>
+  <aside class="notes">
+  </aside>
+</section>
 
-    <script src="//cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
-    <script src="js/dataStore.js" charset="utf-8"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/index.js" charset="utf-8"></script>
-    <script src="js/lib/reveal/js/reveal.min.js" charset="utf-8"></script>
-    <script src="js/lib/reveal/lib/js/head.min.js"></script>
-    <script>
-      var revealRoot = 'js/lib/reveal/';
-      // Full list of configuration options available here:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-        // Parallax scrolling
-        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-        // parallaxBackgroundSize: '2100px 900px',
-        // Optional libraries used to extend on reveal.js
-        dependencies: [
-          { src: revealRoot + 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: revealRoot + 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: revealRoot + 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: revealRoot + 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: revealRoot + 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-          { src: revealRoot + 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-        ]
-      });
-    </script>
+  </div>
+</div>
 
-  </body>
+<script src="//cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
+<script src="js/dataStore.js" charset="utf-8"></script>
+<script src="js/index.js" charset="utf-8"></script>
+<script src="js/lib/reveal/js/reveal.min.js" charset="utf-8"></script>
+<script src="js/lib/reveal/lib/js/head.min.js"></script>
+<script>
+  var revealRoot = 'js/lib/reveal/';
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+    transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+    // Parallax scrolling
+    // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+    // parallaxBackgroundSize: '2100px 900px',
+    // Optional libraries used to extend on reveal.js
+    dependencies: [
+      { src: revealRoot + 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: revealRoot + 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: revealRoot + 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: revealRoot + 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: revealRoot + 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: revealRoot + 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+    ]
+  });
+</script>
+</body>
 </html>
