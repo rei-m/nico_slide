@@ -13,10 +13,27 @@
   height: 56px;
 }
 
-.row--send_comment {
-  margin-bottom: 48px;
-}
-
 .row--button {
   margin-bottom: 24px;
+}
+
+.row__sep {
+  border-color: #adadad;
+}
+
+.question_list {
+  max-height:568px;
+  overflow: auto;
+}
+
+.question {
+  margin-bottom: 8px;
+}
+
+.question__time {
+  font-size: 12px;
+}
+
+.question__text {
+  font-size: 16px;
 }

@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Nico Slide</title>
+  <title>Nico Slide Controller</title>
   <link rel="stylesheet" type="text/css" href="../honoka/css/bootstrap.css">
   <link rel="stylesheet" href="../css/comment.css" media="screen">
 </head>
@@ -15,7 +15,7 @@
   <div class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
-        <span class="navbar-header__title">Nico Slide</span>
+        <span class="navbar-header__title">Nico Slide Controller</span>
       </div>
     </div>
   </div>
@@ -28,33 +28,80 @@
     <div id="comment_form">
       <div class="row row--send_comment">
         <textarea v-model="comment" placeholder="コメントをいれてね" class="form-control" rows="5"></textarea>
-        <input v-on="click: onSend" type="button" class="btn btn-default btn-block btn--send_comment" value="おくる">
+
+        <div class="radio">
+          <span>文字の大きさ：</span>
+          <label>
+            <input type="radio" v-model="size" value="24px">小さい
+          </label>
+          <label>
+            <input type="radio" v-model="size" value="36px">普通
+          </label>
+          <label>
+            <input type="radio" v-model="size" value="48px">大きい
+          </label>
+        </div>
+
+        <div>
+          <span>文字の色　　：</span>
+          <input type="color" name="color" v-model="color">&nbsp;&nbsp;{{color}}
+        </div>
+
+        <div class="radio">
+          <span>流れるはやさ：</span>
+          <label>
+            <input type="radio" v-model="speed" value="20">おそい
+          </label>
+          <label>
+            <input type="radio" v-model="speed" value="10">ぼちぼち
+          </label>
+          <label>
+            <input type="radio" v-model="speed" value="5">はやい
+          </label>
+        </div>
+        <div class="col-xs-6">
+          <input v-on="click: onSend" type="button" class="btn btn-default btn-block btn--send_comment" value="コメントを投稿する">
+        </div>
+        <div class="col-xs-6">
+          <input v-on="click: onSendQuestion" type="button" class="btn btn-default btn-block btn--send_comment" value="質問を投稿する">
+        </div>
+      </div>
+      <div class="row">
+        <hr class="row__sep">
       </div>
       <div class="row row--button">
         <div class="col-xs-6">
           <input v-on="click: onSendLgtm" type="button" class="btn btn-success btn-block btn-square" value=" LGTM ">
         </div>
         <div class="col-xs-6">
-          <input v-on="click: onSendLgtm" type="button" class="btn btn-primary btn-block btn-square" value=" いいね！ ">
+          <input v-on="click: onSendFeelGood" type="button" class="btn btn-primary btn-block btn-square" value=" いいね！ ">
         </div>
       </div>
       <div class="row row--button">
         <div class="col-xs-6">
-          <input v-on="click: onSendLgtm" type="button" class="btn btn-warning btn-block btn-square" value=" なるほど！ ">
+          <input v-on="click: onSendISee" type="button" class="btn btn-warning btn-block btn-square" value=" なるほど！ ">
         </div>
         <div class="col-xs-6">
-          <input v-on="click: onSendLgtm" type="button" class="btn btn-info btn-block btn-square" value=" よくわからん・・・ ">
+          <input v-on="click: onSendCantUnderstand" type="button" class="btn btn-info btn-block btn-square" value=" よくわからん ">
         </div>
       </div>
     </div>
   </div>
   <div class="col-md-6">
+    <ul id="question_list" class="question_list">
+      <li v-repeat="questions | orderBy 'time' -1" class="question">
+        <div class="question__time">{{time}}</div>
+        <div class="question__text">
+          <a href="../{{page}}" target="_blank">{{page}}</a> {{text}}
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 
 </div>
-<script src="https://cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//cdn.mlkcca.com/v2.0.0/milkcocoa.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="../honoka/js/bootstrap.min.js"></script>
 <script src="../js/dataStore.js" charset="utf-8"></script>
 <script src="../js/lib/vue.min.js" charset="utf-8"></script>
