@@ -91,9 +91,7 @@
     <ul id="question_list" class="question_list">
       <li v-repeat="questions | orderBy 'time' -1" class="question">
         <div class="question__time">{{time}}</div>
-        <div class="question__text">
-          <a href="../{{page}}" target="_blank">{{page}}</a> {{text}}
-        </div>
+        <div class="question__text">{{text}}</div>
       </li>
     </ul>
   </div>

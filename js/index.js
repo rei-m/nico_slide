@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   mo.observe(commentArea, {childList:true, attributes: false, attributeOldValue: false});
 
   // MilkCocoaからコメントを受け取った時のコールバック
-  messageDataStore.on('send', function(pushed) {
+  var onReceiveMessage = function(pushed) {
 
     // コメントを表示するElementを作成
     var el = document.createElement('div');
@@ -57,15 +57,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
       el.style['font-size'] = values.size;
       el.speed = values.speed;
       commentArea.appendChild(el);
-
-      if(values.type === 'question') {
-        messageDataStore.push({
-          text: values.content,
-          page: window.location.hash
-        });
-      }
     }
-  });
+  };
+
+  messageDataStore.on('send', onReceiveMessage);
+  messageDataStore.on('push', onReceiveMessage);
 
   // HTMLエスケープ用
   var escapeHtml = function(str) {

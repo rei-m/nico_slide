@@ -26,7 +26,7 @@ $(function(){
       },
 
       onSendQuestion: function(e){
-        messageDataStore.send({
+        messageDataStore.push({
           content: this.comment,
           size: this.size,
           color: this.color,
@@ -104,13 +104,13 @@ $(function(){
                   ('0' + sendDate.getDate()).slice(-2) + ' ' +
                   ('0' + sendDate.getHours()).slice(-2) + ':' +
                   ('0' + sendDate.getMinutes()).slice(-2) + ':' +
-                  ('0' + sendDate.getSeconds()).slice(-2),
-            page: v.value.page
+                  ('0' + sendDate.getSeconds()).slice(-2)
           });
         });
       });
-    },
+    }
   });
+
   messageDataStore.on('push', function(pushed) {
 
     var sendDate = new Date(pushed.timestamp);
@@ -122,8 +122,7 @@ $(function(){
             ('0' + sendDate.getDate()).slice(-2) + ' ' +
             ('0' + sendDate.getHours()).slice(-2) + ':' +
             ('0' + sendDate.getMinutes()).slice(-2) + ':' +
-            ('0' + sendDate.getSeconds()).slice(-2),
-      page: pushed.value.page
+            ('0' + sendDate.getSeconds()).slice(-2)
     });
   });
 });
