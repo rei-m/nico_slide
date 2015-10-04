@@ -98,7 +98,7 @@ $(function(){
         data.map(function(v) {
           var sendDate = new Date(v.timestamp);
           questionVM.questions.push({
-            text: v.value.text,
+            text: v.value.content,
             time: sendDate.getFullYear() + '/' +
                   ('0' + (sendDate.getMonth() + 1)).slice(-2) + '/' +
                   ('0' + sendDate.getDate()).slice(-2) + ' ' +
@@ -116,7 +116,7 @@ $(function(){
     var sendDate = new Date(pushed.timestamp);
 
     questionVM.questions.push({
-      text: pushed.value.text,
+      text: pushed.value.content,
       time: sendDate.getFullYear() + '/' +
             ('0' + (sendDate.getMonth() + 1)).slice(-2) + '/' +
             ('0' + sendDate.getDate()).slice(-2) + ' ' +
