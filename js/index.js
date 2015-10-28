@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     el.style.top = Math.floor( Math.random() * 90 ) + '%';
     el.style.webkitTransform = 'translate(-' + (commentArea.offsetWidth * 2) + 'px, 0px)';
     el.style.webkitTransitionDuration = el.speed + 's';
+    el.style.zIndex = 9999;
 
     // アニメーションが終わったら消す
     setTimeout(function() {
