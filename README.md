@@ -3,6 +3,10 @@ Nico Slide
 
 リスナーがコメントをニコ動っぽく投稿しながらわいわいLTできるフレームワークです。
 
+## Sample
+- [Slide](http://rei-m.github.io/nico_slide/)
+- [Comment](http://rei-m.github.io/nico_slide/comment/)
+
 ## Usage
 - `/comment/index.html`からコメントを投稿すると、ブラウザで開かれている`index.html` にコメントが流れます。
 - コメントはBaas上に保存されませんが、`質問を投稿する`ボタンで投稿した場合のみBaas上に保存されて後から見返すことができます。
